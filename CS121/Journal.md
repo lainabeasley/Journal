@@ -1,6 +1,6 @@
 # Coding Journal
 ## Name: Laina 
-## Lab: Module 1
+## Module 1
 ## May 28 2024
 ### 1.1 Programming (general)
 Computer program basics  
@@ -119,9 +119,64 @@ Java was initially intended to be run on consumer appliances like interactive TV
 ### 1.9 Problem Solving
 Programming langauges vs. problem solving  
 Programming is largely about **problem solving**: creating a methodical solution to a given task.   
+        
+Precision, logic, and computational thinking  
+**Computational thinking** - the thought processes needed to build correct, precise, logical programs
 
 ### 1.10 Why programming
 Computing careers  
 
-Precision, logic, and computational thinking  
-**Computational thinking** - the thought processes needed to build correct, precise, logical programs
+## Module 1 Lecture Video What is Computer Science?
+So what is Computer Science (CS), anyway?  
+
+Computers are a powerful automation tool, but we need to tell them what to do...  
+  How can we communicate with them to take advantage of this power?  
+  How do we break down out problems so that they can be automatically solved by computers?
+  How can we organize our solutions so that others can take advantave of them? (and so we don't always need to reinvent the wheel either).  
+
+What is a computer?  
+  A computer is driven by **code**   
+  Code is made of simple, mechancial instructions   
+  Computers only understand 1s and 0s, so we use **high-level programming languages** that we can understand and **compile** (or translate) them into something the machine can understand.   
+
+Program Development in Java  
+There are many high-level computer programming langauges.  
+    Java, C/C++, C#, Pything, JavaScript, etc.  
+So why Java?  
+    Concepts you learn can be applied to other programming languages.   
+    One of the world's most popular programming languages.  
+    At the core of many applications you use every day.  
+
+First Program - Hello World!  
+Break it down.  
+  javadoc comment
+  Class header  
+  Class body  
+    Method header (like a function)   
+      Method body  
+        inline comment  
+        method call (action)   
+          parameter (argument)
+    Whitespace   
+
+Compile and Execute  
+  source code file  
+  compile  
+  bytecode file   
+  execute  
+  JRE (Java Runtime Environment)  
+
+Syntax and Semantics  
+Every language has its own set of **syntax rules** and **semantics**.  
+  Syntax - Grammer. The rules for what kinds of words/symbols you can put together and in what order.  
+  Semantics - Meaning of the statement.  
+
+Errors and Feedback  
+There are 3 major types of errors  
+  **Compile-time**. Incorrect syntax or other basic problems.  
+    Spelling errors, unmatched braces/parenthesis, etc.   
+  **Run-time**. A problem during program execution that causes it to terminate abnormally.  
+    Divide by zero, main class not found, etc.   
+  **Logical**. The program runs but produces the incorrect results.   
+    Using the wrong formula, producing the wrong output, etc.  
+
