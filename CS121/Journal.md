@@ -4,7 +4,7 @@
 ## May 28 2024
 ### 1.1 Programming (general)
 Computer program basics  
- A computer **program** consists of instructions executing one at a time. Basic instruction types are:  
+  A computer **program** consists of instructions executing one at a time. Basic instruction types are:  
  **Input**: A program gets data, perhaps from a file, keyboard, touchscreen, network, etc.  
  **Process**: A program performs computations on that data, such as adding two values like x + y.  
  **Output**: A program puts that data somewhere, such as to a file, screen, network, etc.   
