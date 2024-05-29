@@ -37,3 +37,29 @@ Outputting multiple items with one statement
  Programmars commonly use a single output statement for each line of output by combining the outputting of text, variable values, and a new line. This is down by serperates the items with a _+_ sybmol. 
 
 ### 1.3 Comments and whitespace
+Comments
+ A **comment** is text a programmer adds to code, to be read by humans to better understand the code but ignored by the compiler. Two common kinds of comments exist:
+ A **single-line comment** starts with // and includes all the following text on that line. Single-line comments commonly appear after a statement on the same line. 
+ A **multi-line comment** starts with /* and ends with */, where all text between /* and */ is part of the comment. A multi-line comment is also known as a **block comment**. 
+
+Whitespace
+ **Whitespace** refers to blank spaces (space and tab characters) between items within a statement and blank lines between statements (called newlines).
+ Good practice is to deliberatly and consistently use whitespace to make a program more readbale. Examples:
+  Use blank lines to separate conceptually distinct statements.
+  Indent lines the same amount.
+  Align items to reduce visual clutter.
+  Use a single space before and after any operators
+
+### 1.4 Why whitespace matters
+Whitespace and precise formatting
+ For program output, **whitespace** is any blank space or newline. 
+
+ Programming is all about precision
+
+### 1.5 Errors and Warnings
+Syntax errors
+ **Syntax error** is to violate a programming language's rules on how symbols can be combined to create a program. 
+
+Unclear error messages
+ Compilor error messages are often unclear or even misleading. The message is like the compiler's "best guess
+ of what is really wrong.
