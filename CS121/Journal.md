@@ -149,15 +149,15 @@ So why Java?
 
 First Program - Hello World!  
 Break it down.  
-  *javadoc comment
-  *Class header  
-  *Class body  
-    *Method header (like a function)   
-      *Method body  
-        *inline comment  
-        *method call (action)   
-          *parameter (argument)
-  *Whitespace   
+  javadoc comment
+  Class header  
+  Class body  
+    Method header (like a function)   
+      Method body  
+        inline comment  
+        method call (action)   
+          parameter (argument)
+  Whitespace   
 
 Compile and Execute  
   source code file  
