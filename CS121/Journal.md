@@ -180,3 +180,6 @@ There are 3 major types of errors
   **Logical**. The program runs but produces the incorrect results.   
     Using the wrong formula, producing the wrong output, etc.  
 
+### Module 1 Lab
+- Run javac fileName.java in java to compile
+
