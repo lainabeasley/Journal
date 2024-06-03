@@ -183,3 +183,23 @@ There are 3 major types of errors
 ### Module 1 Lab
 - Run javac fileName.java in java to compile
 
+## Module 2
+### 2.1 Variables and assignments (general)
+
+Variables and assignments  
+- In a program, a **variable** is a named item, such as x or numPeople, used to hold a value.  
+- An **assignment** assigns a variable with a value, such as x = 5.  
+- As assignment's left side must be a variable. The right side can be an expression.  
+
+= is not equals  
+- In programs, = is an assignment of a left-side variable with a right-side value.
+
+### 2.2 Variables (int)
+Variable declarations  
+- A **variable declaration** is a statement that declares a new variable, specifying the variable's name and type. Ex: _int userAge;_, declares a new variable named userAge that can hold an integer value.
+- **Allocation** is the process of determining a suitable memory location to store data like variables.
+
+Assignment statements
+- An **assignment statement** assigns the variable on the left-side of the = with the current value of the right-side expression. Ex: _numApples = 8;_.
+- An **expression** may be a number like 80, a variable name like numApples, or a simple calculation like numApples +1. An integer like 80 appearing in an expression is known as an **integral literal**.
+
