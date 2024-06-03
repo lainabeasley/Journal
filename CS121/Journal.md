@@ -173,12 +173,12 @@ Every language has its own set of **syntax rules** and **semantics**.
 
 Errors and Feedback  
 There are 3 major types of errors  
--**Compile-time**. Incorrect syntax or other basic problems.  
--Spelling errors, unmatched braces/parenthesis, etc.   
--**Run-time**. A problem during program execution that causes it to terminate abnormally.  
--Divide by zero, main class not found, etc.   
--**Logical**. The program runs but produces the incorrect results.   
--Using the wrong formula, producing the wrong output, etc.  
+- **Compile-time**. Incorrect syntax or other basic problems.  
+- Spelling errors, unmatched braces/parenthesis, etc.   
+- **Run-time**. A problem during program execution that causes it to terminate abnormally.  
+- Divide by zero, main class not found, etc.   
+- **Logical**. The program runs but produces the incorrect results.   
+- Using the wrong formula, producing the wrong output, etc.  
 
 ### Module 1 Lab
 - Run javac fileName.java in java to compile
