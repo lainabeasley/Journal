@@ -203,3 +203,49 @@ Assignment statements
 - An **assignment statement** assigns the variable on the left-side of the = with the current value of the right-side expression. Ex: _numApples = 8;_.
 - An **expression** may be a number like 80, a variable name like numApples, or a simple calculation like numApples +1. An integer like 80 appearing in an expression is known as an **integral literal**.
 
+Initializing variables  
+- Although not required, an integer variable is often assigned an initial value when declared. Ex: _int maxScore = 100;_ declares an int variable named maxSCore with an inital value of 100.
+
+Assignment statement with same variable on both sides  
+- Commonly, a variable appears on both the right and left side of the = operator. Ex: If numItems is 5, after _numItems = numItems + 1;_ executes, numItems with be 6.
+
+Common errors
+- A common error is to read a variable that has not yet been assigned a value.
+- A common error by new programs is to write an assignment statement in reverse.
+
+## 2.3 Identifiers
+Rules for identifiers  
+- A name greated by a programmer for an item like a variable or method is called an **identifier**. An identifer must:
+- be a sequence of letters (a-z, A-Z), underscore (_), dollar signs ($), and digits (0,9)
+- start with a letter, underscore, or dollar sign
+- A good practice followed by many Java programmers is to not use _ of $ in programmer-created identifiers.
+- Identifiers are **case sensitive**, meaning upper and lower case letters differ.
+- A **reserved word** is a word that is part of the language, like int, short, or double. A reserved word is also known as a **keyword**. A programmer cannot use a reserved word as an identifier.
+
+Style guideines for identifiers  
+- While various (crazy-looking) identifiers may be vaild, programmers may follow identifier naming conventions (style) defined by their comany, team, teacher, etc. Two common conventions for naming variables are:
+- Camel case: **Lower camel case** abuts multiple words, capitalizing each word except the first, as in numApples or peopleOnBus.
+- Underscore seperated: Words are lowercase and seperated by an underscore, as in num_apples or people_on_bus.
+- Good practice is to create meaningful identifer names that self-describe an item's purpose. Good practice minimizes use of abbreviations in identifers except for well-known ones like num in numPassenders.
+
+## 2.4 Arithmetic expressions (general)
+Basics  
+- An **expression** is any individual item or combination of items, like variables, literals, operators, and parentheses, that evaluates to a value, like _2 * (x + 1)_. A common place where expressions are used is on the right side of an assignment statement, as in _y = 2 * (x + 1)_.
+- A **literal** is a specific value in code like 2. An **operator** is a symbol that performs a built-in calculation, like +, which performs addition.
+
+Evaluations of expressions  
+- An expression evalutes to a value, which replaces the expression. Ex: If x is 5, then x + 1 evaluates to 6, and y = x + 1 assigns y with 6.
+- An expression is evaluated using the order of standard mathematics, such order known in programming as **precedence rules**.
+- Use parentheses to make the order of evaluation explicit.
+
+## 2.5 Arithmetic expressions (int)  
+Style: Single place around operators  
+- A good practice is to include a single space around operators for readability, as in numItems + 2, rather than numItems+2. An exception is minus used as negative, as in xCoord = -yCoord. Minus (-) used as negative is known an **unary minus**
+
+Compound operators  
+- Special operators called **compound operators** provide a shorthand way to update a varibale, such as userAge **+=** 1 being shorthand for userAge = userAge +1. Other compound operators include **-=**, ***=**, **/=**, and **%=**.
+
+No commas allowed  
+- Commas are not allowed in a integrer literal.  
+
+##2.7 Floating-point numbers (double)
