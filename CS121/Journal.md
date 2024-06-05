@@ -213,7 +213,7 @@ Common errors
 - A common error is to read a variable that has not yet been assigned a value.
 - A common error by new programs is to write an assignment statement in reverse.
 
-## 2.3 Identifiers
+### 2.3 Identifiers
 Rules for identifiers  
 - A name greated by a programmer for an item like a variable or method is called an **identifier**. An identifer must:
 - be a sequence of letters (a-z, A-Z), underscore (_), dollar signs ($), and digits (0,9)
@@ -228,7 +228,7 @@ Style guideines for identifiers
 - Underscore seperated: Words are lowercase and seperated by an underscore, as in num_apples or people_on_bus.
 - Good practice is to create meaningful identifer names that self-describe an item's purpose. Good practice minimizes use of abbreviations in identifers except for well-known ones like num in numPassenders.
 
-## 2.4 Arithmetic expressions (general)
+### 2.4 Arithmetic expressions (general)
 Basics  
 - An **expression** is any individual item or combination of items, like variables, literals, operators, and parentheses, that evaluates to a value, like _2 * (x + 1)_. A common place where expressions are used is on the right side of an assignment statement, as in _y = 2 * (x + 1)_.
 - A **literal** is a specific value in code like 2. An **operator** is a symbol that performs a built-in calculation, like +, which performs addition.
@@ -248,4 +248,25 @@ Compound operators
 No commas allowed  
 - Commas are not allowed in a integrer literal.  
 
-##2.7 Floating-point numbers (double)
+### 2.7 Floating-point numbers (double)
+Floating-point (double) variables  
+- A **floating-point number** is a real number containing a decimal point that can appear anywhere (or "float") in the number. A **double** variable stores a floating-point number. Ex: _double milesTravel;_ declares a double variable.
+- A **floating-point literal** is a number with a fractional part, even if the fraction is 0, as in 1.0, 0.0, or 99.573. Good practice is to always have a digit before the decimal point, as in 0.5, since .5 might mistakenly be viewed as 5.
+- Scanner's nextDouble() method read a floating-point value from input. Ex: _currentTemp = sncr.nextDouble();_ reads a floating-point value from the input and assigns currentTemp with that value.
+
+Choosing a variable type (double vs. int)  
+- A programmer should choose a varible's type based on the type of value held.
+- Integer variables are typically used for values that are counted, like 42 cars, 10 pizzes, or -95 days.
+- Floating-point variables are typically used for measurements, like 98.6 degrees, 0.00001 meters, or -55.667 degrees.
+- Floating-point variables are also used when dealing with fractions of countable items, such as the average number of cars per household.
+
+Floating-point division by zero  
+- Dividing a nonzero floating-point number by zero is undefined in regular arithmetic. Many programming languages produce an error when performing floating-point division by 0, but Java does not. Java handles this operation by producing infinity or -infinity, depending on the sign of the operands. Printing a floating-point variable that holds infinity or -infinity outputs _Infinity_ or _-Infinity_.
+- If the dividend and divisor in floating-point division are both 0, the division results in a "not a number." **Not a number (NaN)** indicates an unrepresentable or undefined value. Printing a floating-point variable that is not a number outputs _NaN_.
+
+Manipulating floating-point output  
+- Some floating-point numbers have many digits after the decimal point. By default, most programming languages output at least 5 digits after the decimal point. A common approach is to output floating-point numbers with a specific number of digits after the decimal to reduce complexity or produce a certain numberical type. The syntax for outputting the double myFloat with two digits after the decimal point is _System.out.printf("%.2f", myFloat);_.
+
+### 2.9 Constant variables  
+- A good practice is to minimize the use of literal numbers in code. One reason is to improve code readability. When a variable represents a literal, the variable's value should not be changed in the code. If the programmar precedes the variable declaration with the keyword final, then the compiler will report an error if a later statement tries to change that variable's value. An initialized variable whose value cannot be changed is called a **constant variable**. A constant variable is also known as a **final variable**. A common convention or practice, is to name constant variables using upper case letters with words seperated by underscores, to make constant variables clearly visible in code.
+
