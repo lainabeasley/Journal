@@ -268,5 +268,154 @@ Manipulating floating-point output
 - Some floating-point numbers have many digits after the decimal point. By default, most programming languages output at least 5 digits after the decimal point. A common approach is to output floating-point numbers with a specific number of digits after the decimal to reduce complexity or produce a certain numberical type. The syntax for outputting the double myFloat with two digits after the decimal point is _System.out.printf("%.2f", myFloat);_.
 
 ### 2.9 Constant variables  
-- A good practice is to minimize the use of literal numbers in code. One reason is to improve code readability. When a variable represents a literal, the variable's value should not be changed in the code. If the programmar precedes the variable declaration with the keyword final, then the compiler will report an error if a later statement tries to change that variable's value. An initialized variable whose value cannot be changed is called a **constant variable**. A constant variable is also known as a **final variable**. A common convention or practice, is to name constant variables using upper case letters with words seperated by underscores, to make constant variables clearly visible in code.
+- A good practice is to minimize the use of literal numbers in code. One reason is to improve code readability. When a variable represents a literal, the variable's value should not be changed in the code. If the programmar precedes the variable declaration with the keyword final, then the compiler will report an error if a later statement tries to change that variable's value. An initialized variable whose value cannot be changed is called a **constant variable**. A constant variable is also known as a **final variable**. A common convention or practice, is to name constant variables using upper case letters with words seperated by underscores, to make constant variables clearly visible in code.  
 
+##3 2.10 Integer divison and modulo  
+Division: Integer rounding  
+- When the operands of / are integrers, the operator performs integer dicison, which does not generate any fraction.
+- The / operator performs floating-point division if at least one operand is a floating-point type.
+
+Division: Divide by 0  
+- For integer division, the second operand of / or % must never by 0, because division by 0 is mathematically undefined. A **divide-by-zero error** occurs at runtime is a divisor is 0, causing a program to terminate. A divide by zero error is an example of a **runtime error**, a severe error that occurs at runtime and causes a program to terminate early.
+
+Modulo (%)  
+- The basic arithmetic operators include not just +, -, *, /, but also %. The **modulo operator (%)** evaluates the remainder of the division of two integer operands.
+
+### 2.11 Type Conversions
+Type Conversions  
+- A **type conversion** is a conversion of one data type to another, such as an int to a double. The compiler automatically performs several common conversions between int and double types, such automatic conversions are known as **implicit conversion**.
+
+Type casting
+- A **type cast** explicity converts a value of one type to another type.
+- A programmar can precede an expression with (_type_) to convert the expression's value to the indicated type. Ex: If myIntVar is 7, then _(double)myIntVar_ converts int 7 to double 7.0.
+
+Common errors
+- A common error is to accidentally perform integer division when floating-point division was intended.
+
+### 2.13 Characters  
+Basics  
+- A variable of **char** type, as in _char myChar;_, can store a single character like the letter m. A **character literal** is surrounded with single quotes, as in _myChar = 'm';_.
+
+Getting a character from input  
+- Java does not have a method for getting one character from input. Instead the following sequence can be used: _myChar = scnr.next().charAt(0);_ The charAt(0) is explained in another section. Briefly, next() gets the next sequence of non-whitespace characters (as a string) and charAt(0) gets the first character in that string.
+
+A character is internally stored as a number  
+- A char variable stores a number. In an output statement, the compiler outputs the number's corresponding character.
+- **ASCII** is an early standard for encoding characters as numbers. Java uses a more recent standard called Unicode.
+
+Escape sequences  
+- In addition to regular characters like Z,$, or 5, character encoding includes numbers for several special characters. Ex: a newline character is encoded as 10. Because no visible character exists for a newline, the language uses an **escape sequence**. A two-character seqience starting with \ that represents a special character.
+
+Outputting multiple character variables with one output statement  
+- A programmer can output multiple character variables with one statement as follows: _System.out.print(" " c1 + c2);_. The initial "" tells the compiler to output a string of characters, and the +'s combine the subsequent characters into such a string.
+
+Common errors  
+- A common error is to use double quotes rather than single quotes around a character literal, as in _myChar = "x"_, yielding a compiler error.
+- Similarly, a common error is to forget the quotes around a character literal, as in _myChar = x_, usually yielding a compiler error (unless x is also a declared variable, then perhaps yielding a logic error).
+
+### Module 2 - Data and Expressions - Strings Lecture Video
+String literals  
+- A sequence of characters surrounded by double quotes.
+- Strings are objects in java. More about this later.
+
+Printing Strings  
+- System.out.println("A String"); // Prints a newline after the string.
+- System.out.print("A string"); // Doesn't print a newline after the string.
+- System.out represents the cestination of the print output - the console.
+- print and println are methods (or operations) of System.out.
+
+String Concatenation  
+- We can concatenate (link together in a chain) two strings using the + operator.
+- 3 concatenated strings: "peanut butter" + " " + "and jelly"
+- Produce one new string: "peanut butter and jelly"
+- Allows strings to be broken across multiple lines.
+- "If this was a long string, we may want it on " +
+- "two lines so that we can see it more easily"
+
+Concatenating Numbers  
+- We can concatenate numbers to strings.
+- 3 concatenated values: "My dog is " + 5 + " years old"
+- Produces one new string: "My dog is 5 years old"
+- What if we concatenate two numbers?
+- 4 concatenated values: "My dog is " + 5 + 3 + " years old"
+- Procudes one new string: "My dog is 53 years old"
+
+Escape Sequences  
+- What if we want to include " in a string?
+- System.out.println("I said "Hello" to you");
+- We get a compile-time error. Where does the string end?
+- Escape sequences allow us to include special characters in our strings.
+- Begin with a backslash (\) character.
+- System.out.println("I said \"Hello"\ to you");
+
+Common Escape Sequences
+- \" double-quote
+- \t tab
+- \n newline
+- \\ backslash
+
+### Module 2 - Data and Expressions - Variables Lecture Video
+What is a variable?  
+- Most (if not all) of our programs manage data.
+- The data must be stored somewhere in the computer's memory.
+- Memory is made up of a bunch of slots that can store data.
+- To find the correct data, we must know which slot (or address) it is stored in.
+- Instead of memorizing all of the specific addresses, we give each slot a meaningful name - a variable.
+
+Properties of Variables
+- Every variable has a name and value that it refers to.
+- The value of a variable can change.
+- Every variable has a type. Once created, a variable can only store data of the type it was created for. (or data that is compatable with the type).
+
+Declaring Variables
+- In Java, every variable must have a type, a name, and a value.
+- String quote = "Don't quit.";
+- The assignment operators (=) sets the value of the variable.
+- We can set the value of a variable after we declare it.
+- String quote;
+- quote = "Don't quit";
+- If no value is set, the variable will have a default value (which depends on the type).
+- String myName; //Value is null
+- We can declate multiple variables of the same type on a single line.
+- String myName, yourName;
+- myName = "Me";
+- yourName = "You";
+
+Changing Variables  
+- Variables always store the last value that was assigned to them.
+- String quote = "Don't quit.";
+- quote = "Always persevere.";
+- What is the value of quote?
+- Variables can only store data of the types they are compatible with.
+- quote = 1000; // Not allowed.
+
+Variable Names  
+- In Java, variable names
+- must be unique,
+- can only consist of a combination of letters, numbers, _, and $, 
+- can not begin with a number,
+- are case sensitive,
+- should use camelCase style for longer variable names.
+
+What is a constant?
+- Constats are identifiers (similar to variables) that hold the same value for the duration of their existence.
+- Used to store values that should never change.
+- If you try to change the value, there will be a compile-time error.
+- Prevents you from accidentally changing a value that should be constant.
+
+Declaring a Constant  
+- In Java, every constant must have a type, a name, and a value.
+- The final modifier is what makes it constant.
+- final String Default_Quote = "Hello World";
+- You must initialize a constant once and only once.
+
+### Module 2 - Data and Expressions - Primitive Data Types Lecture
+Primitive Data Types  
+- There are 8 primitive data types in Java.
+- Numbers
+- byte, short, int, long
+- float, double
+- Characters
+- char
+- Boolean values
+- \t boolean
