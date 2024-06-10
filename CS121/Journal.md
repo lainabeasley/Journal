@@ -418,4 +418,99 @@ Primitive Data Types
 - Characters
 - char
 - Boolean values
-- \t boolean
+- boolean
+
+Numbers  
+- Whole Numbers
+- byte (-128 to 127)
+- short (approx -32 thousand to 32 thousand)
+- int (approx -2 billion to 2 billion_
+- long (approx -9 quintillion to 9 quintillion)
+- Floating Point Numbers
+- float (6-9 significant digits)
+- double (15-17 significant digits)
+
+Number Variables
+- We will primarily use int and double.
+- int numStudents = 10;
+- final int SECOND_PER_MIN = 60;
+- double tax = 0.06;
+- final double PI = 3.14159;
+
+Characters  
+- char
+- Stores a single symbol.
+- 'a' '9' '\n' 'x'
+- Can store a symbol from the Unicode character set
+- English speakers typically use characters from the ASCII character set (A smaller subset of Unicode).
+- To print a special character, use the **\u** escape sequence followed by the code.
+- char smiley = '\u263A'; // :)
+
+Booleans
+- boolean
+- Only two valid values for the boolean type.
+- Reserved words: true and false
+- Commonly used to represent two states (e.g. on/off)
+- boolean isDone = false;
+- boolean tooSmall, hasFur, canTalk;
+
+### Module 2 - Data and Expressions - Expressions (Part 1) Lecture
+Expressions  
+
+Arithmetic Expressions  
+- You should be familiar with most of the operators.
+- +, -, *, /
+- We are going to add one more - the modulo or remainder, operator.
+- %
+
+Mathematical Expressions
+- To start, we will focus on integrers, not floating points.
+- We know volume of a rectangular prism is equal to length x width x height.
+- int length = 10;
+- int width = 5;
+- int height = 15;
+- int volume = length * width * height = 750
+- Right-hand side evaulated first
+
+- To split a package of cookies amoung freinds, we use the equation" # cookies / n.
+- int numCookies = 12;
+- int numFriends = 6;
+- int cookiesPerFriend = numCookies / numFriends; = 2
+- RHS evaulated first
+- int numFriends = 5;
+- int cookiesPerFriend = numCookies / numFriends; = 2.4 = 2
+
+Integer Division - Casting
+- If we want to keep the precision, we need to treat the integers as **doubles** and store the result in a double.
+- int numCookies = 12;
+- int numFriends = 5;
+- double cookiesPerFriend = ( (double) numCookies) / numFriends; = 2.4
+
+### Module 2 - Data and Expressions - Expressions (Part 2) Lecture
+Modulo (aka Remainder)
+- Examples:
+- 139 / 6 = 23 with remainder 1, thus 139 % 6 =1
+- 7 / 2 = 3 R1, 7 % 2 = 1
+
+-  a modulo b is a remainder of the result of a divided by b.
+-  Used to determine how many are left over.
+-  Used to determine if numbers are divisible by a number.
+-  Clocks are modulo 12 (or 24 if using "military time").
+-  Used in cryptography/encryption.
+
+-   What are the results?
+-   14 % 3 = 2
+-   8 % 12 = 8
+-   10 % 2 = 0
+-   7 % 6 = 2
+-   0 % 6 = 0
+-   9 % 0 = error
+
+Order of Operations  
+- Evaluated from left to right in order of precedence.
+- What you are used to in math.
+- Can lead to bugs in code if you aren't careful.
+- When in doubt, use parentheses for clarity.
+
+Knowledge Check - Order of Operations
+
