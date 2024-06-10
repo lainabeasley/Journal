@@ -514,3 +514,117 @@ Order of Operations
 
 Knowledge Check - Order of Operations
 
+### Module 2 - Data and Expressions - Assignment Operators Lecture Notes
+Assignment Operators  
+- It is common for the RHS and LHS of an expression to contain the same variable.
+- count = count - 1;
+- money = money * 1.5;
+- sentence = sentence + " next word";
+- Java provides **assignment operators** to simplify expressions.
+- +=, -=, *=, /=, %=
+- count -= 1;
+- money *= 1.5;
+- sentence += " next word";
+
+Increment and Decrement Operators  
+- The **increment operator** (++) adds one to its operand.
+- int count = 10;
+- count++; //same effect as count = count + 1;
+- The **decrement operator** (--) adds one to its operand.
+- int count = 10;
+- count--; // same effect as count = count - 1;
+- Note: It is best not to use these in larger expressions. They can cause confusion and unexpected results. Use only as a standalone statement.
+
+### Module 2 - Data and Expressions - Data Conversion (part 1) Lecture Notes
+Relative Data Sizes  
+- Smaller data types can be stored in larger types without risk of lsoing data.
+
+"Widening" Conversions  
+- If the type of the variable is "wider" than the type of the value being assigned, the **assignment conversion** occurs automatically.
+- int smallNumber = 10025;
+- long bigNumber = smallNumber;
+- double bigDecimal = bigNumber;
+
+Automatic Assignments  
+- Not all dyles will be automatically assigned.
+- For the data types we have discussed, here are valid automatic assignments.
+
+"Narrowing" Conversions  
+- If the type of the variable is "narrower" than the type of the value being assigned, the assignment conversion fails to occur automatically.
+- long bigNumber = 9223372036854L;
+- int smallNumber = bigNumber; // error only first 4 numbers
+- double decimal = 9223.34;
+- int whole number = decimal; // error only whole number
+
+Casting  
+- We can explicity force narrowing conversions by **casting** data to a different type.
+
+Casting - Integer Division  
+- numCookies is **cast** as a double in this expression. It does not become a double, it behaves as a double temporarily.
+- int numCookies = 12;
+- int numFriends = 5;
+- double cookiesPerFriend = ( (double) numCookies) / numFriends;
+
+Casting - Limitations  
+- Not all types can be cast as different types.
+
+Wrapper Classes  
+- the conversions we've discussed so far are specific to primitive data types. It is not possible to use a cast to convert between a primitive type and a String, for instance.
+- String answer = (String)42; // Not allowed.
+- However, data on the right-hand side can be manually (or automatically) converted to a compatible data type before it is assigned. Each primitive type has a cooresponding Wrapper type that can perform the conversion.
+- String answer = Integer.toString(42);
+- int value = Integer.parseInt(answer);
+
+Assignment Conversion and Casting
+- Which of the following conversion are valid? Which are not?
+- String amount = (String) 10000; // Not valid
+- int result = 3.467; // valid
+- int count = (int) 56.23; // valid
+- double pi = count; // valid
+- boolean isOn = (boolean) "true"; // Not valid
+
+### Module 2 - Data and Expressions - Data Conversion (part 2) Lecture Notes  
+Promotion - Conversion in Expressions  
+- When an operator applies **promotion** to a pair of operands, each of which must denote a value that is convertible to a numeric type, the following rules apply, in order:
+- If either operand is of type double, the other is converted to double.
+- Otherwise, if either operand is of type float, the other is converted to float.
+- Otherwise, if either operand is of type long, the other is converted to long.
+- Otherwise, both operands are converted to type int.
+
+Promotion in Expressions  
+- When multiple data types are used in an expression, **promotion** happens automatically.
+- Consider the following expression:
+- double sum = 10.5;
+- int count = 3;
+- double average = sum / count; // count is promoted to a double when the expression is evaluated.
+
+Promotion in Expressions - Pitfalls  
+- When **only int data types** are used in an expression, the result will be an integer. There is nothing to promote.
+- Consider the following expression:
+- int sum = 10;
+- int count = 3;
+- double average = sum / count; // result will be an integer
+
+Order of Operations and Promotion  
+- Recall: Expressions are evaluated from left to right in order of operator precedence.
+- The order can change results of an expression, especialy where integer division is involved.
+- final double PI = 3.14159;
+- double radiusCubed = 1.0;
+- double volume1 = 4 / 3 * PI * radiusCubed;
+- double volume2 = PI * radiusCubed * 4 / 3;
+- volume1 does not equal volume 2.
+
+### Module 2 - Data and Expressions - User Input Lecture Notes  
+Reading User Input  
+- The **Scanner** class allows us to read text from a given input.
+- It is commonly used to read keyboard input from the user to creative interactive programs. (We will see later that it can also read from files and parse through Strings).
+- By default, whitespace is used to seperate input elements, called **tokens**. Whitespace includes tabs ('\t') spaces, and newline characters ('\n'. '\r').
+
+Reading Various Data Types  
+- Several methods are provided to read tokens of various types.
+- String: **next()** Finds and returns the next complete token from this scanner.
+- String: **nextLine()** Advances this scanner past the current line and returns the input that was skipped.
+- int: **nextInt()** Scans the next token of the input as an int.
+- double: **nextDouble()** Scans the next token of the input as a double.
+
+### Module 2 - Data and Expressions - TempConverter Example Lecture Notes
