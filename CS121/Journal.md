@@ -628,3 +628,87 @@ Reading Various Data Types
 - double: **nextDouble()** Scans the next token of the input as a double.
 
 ### Module 2 - Data and Expressions - TempConverter Example Lecture Notes
+
+## Module 3
+### 3.1 Objects: Introduction  
+Grouping things into objects  
+- In programming, an **object** is a grouping of data (variables) and operations that can be performed on that data (methods).
+
+Abstractions/Information hiding  
+- **Abstraction** means to have a user interact with an item at a high-level, with lower-level internal details hidden from the user (aka **information hiding** or **encapsulation**.)
+- An **abstract data type (ADT)** is a data type whose creation and update are constrained to specific well-defined operations.
+
+### 3.2 Using a Class  
+Class intro: Public member methods  
+- The **class** construct defines a new type that can group data and methods to form an object. A class' **public member methods** indicate all operations a class user can perform on the object.
+
+Using a class  
+- A **reference variable** can refer to an instance of a class. The **new** operator explicitly allocates an **object** of the specified class type.
+- The "." operator, known as the **member access operator**, is ued to invoke a method on an object.
+
+Class example: String  
+
+### 3.3 Objects and References
+References  
+- A **reference** is a variable type that refers to an object.
+
+Multiple object references  
+- Two or more reference variables may refer to the same object, as illustrated below.
+
+### 3.4 Primitive and reference types  
+Wrapper classes
+- Java variables are one of two types.
+- A **primitive type** variable directly stores the data for that variable type, such as int, double, or char. Ex: _int numStudents = 20;_ declares and int that directly stores the data 20.
+- A **reference type** variable can refer to an instance of a class, also known as an object.
+- Java provides several **wrapper classses** that are built-in reference types that augment the primitive types. The **Integer** data type is a built-in class in Java that augments the int primitive type. Ex: _Integer maxPlayers = 10;_ declares an Integer reference variable named maxPlayers that referes to an instance of the Integer class, also known as an Integer object.
+
+Memory allocation for the wrapper class objects  
+- A wrapper class object (as well as a String object) is **imutable**, meaning a programmer cannot change the object via methods or variable assignments after object creation. When the result of an expression is assigned to an Integer reference variable, memory for a new Integer object with the computed value is allocated, and the reference (or address) of this new object is assigned to the reference variable.
+
+Comparing wrapper class objects  
+- For reference variables of wrapper classes (e.g., Integer, Double, Boolean), a common error is to use the equality operators _==_ and _!=_ when comparing values, which does not work as expected.
+- Although a programmer should never compar two reference variables of wrapper classes using the equality operators, a programmer may use the equality operators when comparing a wrapp class object with a primitive variable or a literal constant.
+- Reference variables of wrapper classes can also be compared using the **equals()** and **compareTo()** methods. These method descriptions are presented for the Integer class, but ally equally well to the other wrapper classes.
+
+### 3.5 Wrapper class conversions 
+Autoboxing and unboxing  
+- Java allows statements to combine primitive and wrapper class variables by automatically converting between primitive types and wrapper classes. **Autoboxing** is the automatic conversion of primitive types to the corresponding wrapper classes. **Unboxing** is the automatic conversion of wrapper class objects to the corresponding primitive types.
+
+Converting to primitive types  
+- The Integer, Double, and Long wrapper classes provide methods for converting objects to primitive types
+- **intValue()**
+- **doubleValue()**
+- **longValue()**
+- The Character and Boolean classes support the **charValue()** and **booleanValue()** methods, respectively, which perform similar functions.
+
+Converting to and from Strings  
+- Wrapper classes feature methods that are useful for converting to and from Strings. Several of these methods are static methods, meaning they can be called by a program without creating an object. To call a static method, the name of the class and a '.' must precede the static method name, as in _Integer.toString(16);_
+- **toString()**
+- **Integer.toString(someInteger)**
+- **Integer.parseInt(someString)**
+- **Integer.valueOf(someString)**
+- **Integer.toBinaryString(someInteger)**
+
+### 3.6 Using packages 
+Built-in Java packages  
+- Java provides a variety of built-in classes, such as Scanner, ArrayList, File, and many others, that programmers can use to write programs. Given the large number of built-in classes, Java organizes related classes into groupings called packages.
+- A **package** is a grouping of related types, classes, interfaces, and subpackage. The types, classes, and interfaces in a package are called **package members**.
+
+Using package members in a program  
+- A programmer can use a package member using one of the following methods.
+- Using a package member's fully qualified name: A class' **fully qualified name** is the concatenation of the package name with the class name using a period. Ex: _java.util.Scanner_ is the fully qualified name for the Scanner class in the java.util package.
+- Using an import statement to import the package member: An **import statement** imports a package member into a file to unable use of the package member directly, without having to use the package member's fully qualified name. Ex: _import java.util.Scanner;_ imports the Scanner class into a file and allows a programmer to use SCanner instead of java.util.Scanner.
+- Using an import statement to import every member in a package: A programmer imports all members of a package by using the **wildcard** character * instead of a package member name. Ex: _import java.util.*;_ imports all classes in the java.util package.
+
+### 3.7 Random numbers  
+Generating a random number
+- The **Random** class provides methods that return a random integer in the rang -2^31 to 2^31 - 1 or a programmer-defined range.
+- The statement _import java.util.Random;_ enables use of the Random class. The statement _Random randGen = new Random();_ creates a new random number generator named randGen. The method call randGen.nextInt() can then be used to get a random integer ranging from -2^31 to 2^31 -1.
+- An argument can be passed to the next to the nextInt() method to return an integer between 0 (inclusive) and the specified value (exclusive). Ex. **nextInt(10)_ return 10 possible values: 0, 1, 2 ..., 8, 9.
+
+Specific ranges  
+- The programmer should first determine the number of values in the range, generate a random integer with that number of possible values, and then add x to adjust the range to start with x.
+
+Pseudo-random  
+- The integers generated by a Random object are known as pseudo-random. "Pseudo" means "not actually, but having the appearance of". Internally, the nextInt() method has an equation to compute the next "random" integer from the previous one, (invisibly) keeping track of the previous one. For the first call to nextInt(), no previous random integer exists, so the method uses an integer known as the **seed**.
+- A programmar can specify the seed when the Random obkect is created, as in _Random randGen = new Random(5);_ or using the setSeed() method, as in _randGen.setSeed(5);_. 
