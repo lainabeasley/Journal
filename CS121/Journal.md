@@ -949,3 +949,148 @@ Casting - Limitations
 - Not all types can be cast as different types.
 - Wrapper Classes also allow converting from primitive data types to String objects.
 - However these typically do not need to be called because java often handgles this automatically as part of the concatenation operation.
+
+## Module 4 Part 1 Reading
+### 4.1 If-Else branches(general)
+Branch Concept  
+
+Branch basics (If)
+- In a program, a **branch** is a sequence of statements only executed under a certain condition.
+- An if branch is taken only IF an expression is true.
+
+If branch exmaple: Absolute value  
+
+If-else branches
+- An **if-else** branch has two branches: The first branch is executed IF an expression is true, ELSE the other branch is executed.
+
+If-else example: Max  
+
+If-elseif-else branches
+- Commonly a programmer wishes to take one of multiple (three of more) branches. An if-else can be extended to an if-elseif-else structure.
+- Note: The else part is optional. If omitted, then if none of the previous expressions are true, no branch executes.
+
+### 4.2 Detecting equal values with branches
+Detecting if two items are equal using an if statement
+- A program commonly needs to determine if two items are equal.
+- An **if** statement executes a group of statements if an expression is true. Braces surround the if branch's statements. **Braces** {}, sometimes redundantly called curly braces, represent a grouping, such as a grouping of statements.
+- The **equality operatory (==)** evaluates to true if the left and right sides are equal.
+- Good practice is to indent a branch's statements, using a consistent number of spaces.
+
+Equality and inequality operators  
+- Whereas the equality operator checks whether two values are equal, the **inequality operator (!=)** evaluates to true if the left and right sides are not equal, or different.
+- An expression involving the equality or inequality operators evaluates to a Boolean value. A **Boolean** is a type that has just two values: true or false.
+
+If-else statement
+- An **if-else** statement executes one group of statements when an expression is true, and another group of statements when the expression is false.
+
+Multi-branch if-else statements  
+- Commonly, a program may need to detect several specific values of a variable. An If-else statement can be extended to have three (or more) brances. Each branch's expression is checked in sequence. As soon as one branch's expression is found to be true, that branche's statements execute (and no subsequent branch is considered). If no expression is true, the else branch executes.
+
+Comparing characters, strings, and floating-point types
+- The relational and equality operators work for integer, character, and floating-point built-in types.
+- Comparing characters compares their Unicode numerical coding.
+- Floating-point types should not be compared using the equality operators, due to the imprecise representation of floating-point numbers.
+- The operators should not be used with strings; unexpected results will occur.
+
+### 3.3 Detecting ranges with branches (general)
+Detecting ranges using if-elseif-else
+- A common programming cast is to detect if a value lies within a certain range and then perform an action depending on where the value lies.
+- An if-elseif-else structure can detect number ranges with each branch performing a differect action for each range. Each expression only needs to indicate the upper range part; if execution reaches an expression, the lower range part is implicit from the previous expressions being false.
+
+Using multi-branch if-else to detect ranges
+- The sequential nature of multi-branch if-else statements is useful to detect ranges of numbers. In the following example, the second branch expression is only reached if the first expression is false. So the second branch is taken if userAge < 16 is false (so 16 or greater) AND userAge < 25, meaning userAge is between 16 - 24 (inclusive).
+
+### 4.4 Detecting ranges with branches  
+Relational operators  
+- A **relational operator** checks how one operand's value relates to another, like being greater than.
+- Some operators, like >=, involve two characters. A programmer cannot arbitrarily combine the >, =, and < symbolbs; only the shown two-character sequences represent valid operators.
+
+### 4.5 Detecting ranges using logical operators  
+Logical AND, OR, and NOT (general)  
+- A **logical operator** treats operands as being true or false, and evaluates to true or false. Logical operators include AND, OR, and NOT. Programming languages typically use various symbols for those operators, but below the words AND, OR, and NOT are used for introductory purposes.
+
+- a AND b: **Logical AND**: true when both of its operands are true.
+- a OR b: **Logical OR**: true when at least one of its two operands are true.
+- NOT a: **Logical NOT**: true when its one operand is false, and vice-versa.
+
+Detecting ranges with logical operators (general)
+- A common use of logical operators is to detect if a value is within a range.
+
+Logical operators  
+- Special symbols are used to represent the AND, OR, and NOT logical operators. Logical operators are commonly used in expression of if-else statements.
+
+- a && b: **Logical AND** (&&): true when both its operands are true
+- a || b: **Logical OR** (||): true when at least one of its operands are true
+- !a: **Logical NOT** (!): true when its one operand is false, and vice-versa.
+
+Detecting ranges implicity vs. explicity  
+- A programmer often uses logical operators to detect a range by explicity specifying the high-end and low-end of the range. However, if a program should detect increasing ranges without gaps, a multi-branch if-else statement can be used without logical operators; the low-end of the rang is implicity known upon reaching an expression. Likewise, a decreasing range without gaps has implicitly-known high-ends.
+
+### 4.6 Detecting ranges with gaps  
+Basic ranges with gaps  
+- Oftentimes, ranges contain gaps. An if-else statement can be used to detect such ranges with gaps.
+
+Ranges with gaps using logical operators  
+- Programmers often use logical operators to explicitly detect ranges with an upper and lower bound, including ranges with gaps that may have intermediate bounds. Further, the ranges can be combined into a single branch using the logical OR operator.
+
+### 4.7 Detecting multiple features with branches  
+Multiple distinct if statements 
+- A programmer can use multiple if statements in sequence to detect multiple features with independent actions. Multiple sequential if statements look similar to a multi-branch if-else statement but has a very different meaning. Each if-statement is independent, and thus more than one branch can execute, in constrast to the multi-branch if-else arrangement.
+
+Nested if-else statements  
+- A branch's statements can include any valid statements, including another if-else statement, which are known as **nested if-else** statements. Nested if statements are commonly used to make decisions that are based on multiple features.
+
+### 4.8 Common branching errors
+Common error: Missing braces
+- When a branch has a single statement, the braces are optional, but good practice always uses the braces. Always using braces even when a branch only has one statement prevents the common error of mistakenly thinking a statement is part of a branch.
+
+Common error: Using the incorrect operators  
+- A common error is to use = rather than == in an if-else expression.
+
+### 4.11 Switch statements
+Switch statement
+- A **switch** statement can more clearly represent multi-branch behavior involving a variable being compared to constant values. The program executes the first **case** whose constant expression matches the value of the switch expression, executes that case's statements, and then jumps to the end. If no case matches, then the **default case** statements are executed.
+
+Switch statement general form
+- The switch statement's expression should be an integer, char, or string. The expression should not be a Boolean or a floating-point type. Each case must have a constant expression like 2 or 'q'; a case expression cannot be a variable.
+- The order of cases doesn't matter assuming break statements exist at the end of each case. The earlier program could have been written with case 3 first, then cas 2, then case 0, then case 1, for example.
+- Good practice is to always have a default case for a switch statement.
+
+Omitting the break statement
+- Omitting the **break** statement for a case will cause the statements within the next case to be executed. Such "falling through" to the next case can be useful when multiple cases, such as cases 0, 1, and 2, should execute the same statements.
+
+### 4.12 Boolean data type
+Boolean data type  
+- **Boolean** refers to a quantity that has two possible values, true or false. Java has the built-in data  type **boolean** for representing Boolean quantities.
+- A Boolean variable may be set using true or false keywords. A Boolean variable may also be set to the result of a logical expression.
+
+Uses of Boolean data types
+- A programmer can use a Boolean variable to simplify a complex expression. An expression that combines logical and relational operators can be simplified by assigning boolean variables with the result of the expression using relational operators. The if-else expression can then consist of only logical operations using those variables.
+
+### 4.13 String comparisons  
+String comparison: Equality  
+- Two strings are commonly compared for equality. Equal strings have the same number of characters, and each corresponding character is identical.
+- A programmer can compare two strings using the notation _str1.equals(str2)_. The **equals** method returns true if the two strings are equal. A common error is to use == to compare two strings, which behaves differently than expected.
+
+String comparison: Relational
+- Strings are sometimes compared relationally (less than, greater than), as when sorting words alphabetically. A comparison begins at index 0 and compares each character until the evauluation results in flase, or the end of a string is reached.
+- A programmer compares strings relationally using the notation str1.compareTo(str2). **compareTo()** returns value as follows:
+- Table 4.13.1
+
+- A common error is to forget that case matteres in a string comparison. A programmer can compare strings while ignoring case using str.equalsIgnoreCase(str2) and str1.compareToIgnoreCase(st2).
+
+### 4.14 String access operations  
+String character indices  
+- A string is a sequence of characters in memory. Each string character has a position number called an **index**, starting with 0 (not 1).
+
+Accessing string characters
+-**charAt()**: The notation someString.charAt(x) determines the character at index x of a string.  
+
+Working with the end of a string  
+- Determing the last character in a string is often useful. If a string's length is known, the last character is at index length -1. The method _s1.length()_ returns s1's length.
+- A common task is to append(add to the end) a string to an existing string.
+- The **+** operator can return a new string that appends a string to another string.
+- Similarly, s1.concat(S2) returns a new string that appends s2 to s1.
+
+Common errors
+- A common error is ot access an invalid string index, especially exactly one larger than the largest index. 
