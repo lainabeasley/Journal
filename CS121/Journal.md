@@ -1093,4 +1093,183 @@ Working with the end of a string
 - Similarly, s1.concat(S2) returns a new string that appends s2 to s1.
 
 Common errors
-- A common error is ot access an invalid string index, especially exactly one larger than the largest index. 
+- A common error is ot access an invalid string index, especially exactly one larger than the largest index.
+
+### 4.15 Character operations 
+- The Character class provides several methods for working with characteres.
+- Table 4.15.1
+
+### 4.16 More string operators  
+Finding in a string / Getting a substring  
+- The String data type comes with several useful features. THe features are made possible due to String's implementation as a class, which for purposes here can be though of as several useful methods. Some useful methods are shown below.
+- Table 4.161.
+
+Combining / Replacing  
+- The String class has more methods for modifying strings.
+- Table 4.16.2
+
+## Module 4 - Conditionals and Loops - Lecture Videos
+### Module 4 - Conditionals and Loops - Boolean Expressions Lecture Notes
+Conitionals
+- Conditionals give us the power to choose which statements in a program will be executed under specific conditions.
+- If the sun is out, then it is day.
+- If it is Tuesday and it is not summer, spring, or winter break, then I am in class.
+- If the radius is greater than 100, then change the color to red.
+- If the password equals the expected password, then grant access. Else, deny.
+
+Relational Operators  
+- Decisions are typically based on **equality** and/or **comparisons**.
+- We can use the equality and comparison operators to compare data.
+- Expressions using the operators return a **boolean**(true or false).
+- (3 == 3) -> **true**
+- (3 >= 4) -> **false**
+
+- Operator - meaning
+- == - equal to
+- != - not equal to
+- < - less than
+- <= - less than or equal to
+- > - greater than
+- >= - greater than or equal to
+
+Logical Operators  
+- We can build compound decisions expressions using the **logical operators**.
+- Logical AND (&&) and OR (||) operators have _lower precedence_ than the relational operators (aka. they are evaulated after).
+- Logical NOT(!) has a higher precedence than only of the other logical and relational operators.
+- Expressions using the operators take **boolean** operands and return a **boolean** (true or false).
+- (true && false) -> **false**
+- (!false) -> **true**
+
+- Operator: Meaning
+- ! : logical NOT
+- && : logical AND
+- || : logical OR
+
+Logical Operators: Truth Tables
+
+Example
+- SmartHome.java
+
+### Module 4 - Conditionals and Loops - Basic if Statement Lecture Notes  
+Syntax  
+
+if( condition )  
+{  
+  // statements    
+}  
+// other code    
+
+Knowledge Check  
+Write an if-statement
+- Write an if statement that checks is the legnth of a String, name, is less than or equal to 50 characters.
+- Guided experimentation
+
+Alternate Syntax  
+if ( condition )  
+  // statement  
+// other code    
+
+### Module 4 - Conditionals and Loops - The if-else Statement Lecture Notes  
+Syntax if-else  
+
+if( condition )  
+{  
+  // statement  
+}  
+else  
+{  
+  // statement  
+}  
+// other code    
+
+### Module 4 - Conditionals and Loops - The if-else-ef-else Statement Lecture Notes
+Syntax if-else-if  
+
+if ( condition1 )  
+{  
+  // statements  
+}  
+else if ( condition 2 )  
+{  
+  // statements    
+}  
+// other code    
+
+Syntax if-else   
+
+if (condition1)   
+{  
+  // statements  
+}  
+else if (condition2)  
+{  
+  // statements    
+}  
+else  
+{  
+  // statements    
+}  
+// other code    
+
+Example  
+- AgePhrases.java
+
+### Module 4 - Conditionals and Loops - Nested if Statements Lecture Notes  
+Nested Statements  
+- The statements executed inside of if and else blocks can be additional if-else statements.
+- This allows us to further define decisions in our code.
+- If the username exists, then check if the password equals the expected password, else deny.
+
+Syntax nested if  
+
+if (condition1)   
+{  
+  if (condition2)  
+  {  
+    // statements  
+  }  
+  // statements    
+}  
+// statements    
+
+### Module 4 - Conditionals and Loops - The Ternary Operator Lecture Notes  
+Using the Ternary Operator  
+- Allows you to **assign a value to a variable based on a boolean expression** in a single line of code.
+- An alternative to the if-else syntax.
+- Also called the "Conditional Operator".
+
+General Syntax  
+
+result = testCondition ? value 1 : value2;  
+
+Example
+- Dimes.java
+
+### Module 4 - Conditionals and Loops - MinOfThree Example Lecture Notes  
+
+### Module 4 - Conditionals and Loops - Comparing Floating Point Numbers Lecture Notes
+
+### Module 4 - Conditonals and Loops - Comparing Characters Lecture Notes  
+
+### Module 4 - Conditionals and Loops - Comparing Objects Lecture Notes  
+
+### Module 4 - Conditionals and Loops - Comparing Strings Lecture Notes  
+
+### Module 4 - Conditionals and Loops - Switch Statements Lecture Notes  
+Syntax switch  
+- The **expression** must result in an integer type, char, enum, or String.
+- It cannot be a boolean value or floating point.
+
+switch ( expression )  
+{  
+case value1:  
+  // statements  
+  break;  
+case value 2:  
+  // statements  
+  break;  
+default:  
+  // statements  
+}  
+
+### Module 4 - Conditionals and Loops -   
