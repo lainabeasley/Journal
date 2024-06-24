@@ -1108,6 +1108,76 @@ Combining / Replacing
 - The String class has more methods for modifying strings.
 - Table 4.16.2
 
+### 4.17 Conditional expressions
+- If-else statements with the form shown below are so common that the language supports the shorthand notation shown.
+- A **conditional expression** has the form _condition ? exprWhenTrue : exprWhenFalse_.
+- All three operands are expressions. If the condition evaulates to true, then exprWhenTrue is evaluated. If the condition evaluates to false, then exprWhenFalse is evaluated. The conditional expression evaluates to whichever fo thsoe two expressions was evaluated.
+- A conditional expression has three operands and thus the "?" and ":" together are sometimes referred to as a **ternary operator**.
+- Good practice is to restrict usage of conditional expressions to an assignment statement.
+
+### 4.18 Floating-point comparison  
+- Floating-point numbers should not be compared using ==.
+- Floating-point numbers should be compared for "close enough" rather than exact equality. The different threshold indicating that floating point numbers are equal is often called the **epsilon**.
+
+### 4.23 While Loops 
+While loop: Basics  
+- A **while loop** is a program construct that repeatedly executes a list of sub-statements (known as the **loop body**) while the loop's expression evaluates to true. Each execution of the loop body is called an **iteration**. Once entering the loop body, execuation continues to the body's end, even if the expression would become false midway through.
+- while (expression) { //Loop expression
+-   //Loop body: Executes if expression evaluated to tru
+-   //After body, execution jumps back to the "while"
+- }
+- //Statements that execute after the expression evaluates to false
+
+Basic while loop example  
+
+Getting input before a loop  
+- Another common pattern gets that initial value from user input as well, thus getting input in two places: before the loop, and at the loop body's end.
+
+Loop expressions  
+- Various kinds of expression are found in while loop expressions. For example, sometimes a loop is executed as long as a value is greater than another value, or less than another value. Sometimes a loop is executed as long as a value is NOT equal to another value.
+
+Common errors  
+- A common error is to use the opposite loop expression than desired, like using x == 0 rather than x != 0. Programmers should remember that the expression describes when the loop should iterate, not when the loop should terminate.
+- A **infinite loop** is a loop that never stops iterating. A common error is to accedentally create an infinite loop, often by forgetting to update a variable in the body, or be creating a loop expression whose evaluation to false isn't always reachable.
+- Another common error is to use the assignment operator = rather than the equality operator == in a loop expression.
+
+### 4.24 More while example
+Example: GCD  
+
+Example: Conversation  
+
+Example: Getting input until a sentinel is seen
+- Loops are commonly used to process an input list of values. A **sentinel value** is a special value indicating the end of a list, such as a list of positive integers ending with 0, as in 10 1 6 3 0.
+
+### 4.25 For loops
+Basics 
+- A loop commonly must iterate a specific number of times, such as 10 times. Though achievable with a while loop, that situation is so common that a special kind of loop exists. A **for loop** is a loop with three parts at the top: a loop variable initialization, a loop expression, and a loop variable update. A for loop describes iterating a specific number of times more naturally than a while loop.
+- The statement _i = i + 1_ is so common that the language supports the shorthand **++i**, with ++ known as the **increment operator**. (Likewise, **--** is the **decrement operator**, --i meaning i = i -1).
+- Note: Actually two increment operators exist: ++i(**pre-increment**0 and i++(**post-increment**).
+
+Example: Savings with interest  
+
+Example: Computing the average of a list of input values  
+
+Choosing amoung for and while loops  
+- Generally, a programmer uses a for loop when the number of iterations is known (like loop 5 times, or loop numItems times), and a while loop otherwise.
+
+### 4.26 More for loop examples  
+Example: Finding the max  
+
+Beyond iterating N times 
+- The three parts of a for loop may be adjusted to do more than just iterate N times. For example, a for loop can output various sequences.
+
+Example: Outputting a table of temperatures  
+
+Loop style issues 
+- Starting with 0: Programmers in C, C++, Java, and other langauges have generally standardized on looping N times by starting with i = 0 and checking for i < N, rather than by simply using i = 1 and i <= N. One reason is due to other constructs (arrays / vectors), often used with loops, start with 0.
+- The ++ operators: The ++ operator can appear as ++i(**prefix form**) or as i++(**postfix form**). ++i increments i first and then evaluates the result, while i++ evaluates the result first and then increments i.
+- In-loop declaration of i: Variables can be declared throughout code, so many programmers use: _for (int i = 0, i < N, ++i)_.
+
+Common errors / good practice  
+- A common error is to also have ++i; statement in the loop body, causing the loop variable to be updated twice per iteration.
+
 ## Module 4 - Conditionals and Loops - Lecture Videos
 ### Module 4 - Conditionals and Loops - Boolean Expressions Lecture Notes
 Conitionals
@@ -1272,4 +1342,58 @@ default:
   // statements  
 }  
 
-### Module 4 - Conditionals and Loops -   
+### Module 4 - Conditionals and Loops - While Loops Lecture Notes  
+Key Elements of a Loop 
+- **Initial conditions** (where do we start?)
+- **Statements** (what are we going to do each time?)
+- **Looping condition** (how long will we keep going?)
+
+Syntax while  
+
+while (condition)  
+{  
+  // statements  
+}  
+// other code  
+
+Example
+- BasicWhileLoops.java
+
+### Module 4 - Conditionals and Loops - Infinite Loops Lecture Notes  
+
+### Module 4 - Conditionals and Loops - For Loops Lecture Notes  
+Key Elements of a Loop 
+- **Initial conditions** (where do we start?)
+- **Statements** (what are we going to do each time?)
+- **Terminating conditions** (how long will we keep this going?)
+
+Syntax for  
+
+for (initialization; condition; increment)  
+{  
+  // statements  
+}  
+// other code  
+
+While Loop vs For Loop
+- While num is less than or equal to 5, print the value of num
+- For num from 1 to 5 (inclusive), print the value of num
+
+Example
+-  BasicForLoops.java
+
+### Module 4 - Conditionals and Loops - Strings and Loops Lecture Notes  
+
+### Module 4 - Conditionals and Loops - Nested for Loops Lecture Notes  
+Syntax nested loop
+- The body of a loop can contain another loop.
+- For each iteration of the outer loop, the inner loop iterates completely.
+
+for (initialization; condition; increment)  
+{  
+  // statements  
+  for (initialization; condition; increment)  
+  {
+    // statements  
+  }  
+}  
