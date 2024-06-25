@@ -1178,6 +1178,20 @@ Loop style issues
 Common errors / good practice  
 - A common error is to also have ++i; statement in the loop body, causing the loop variable to be updated twice per iteration.
 
+### 4.27 Loops and strings
+Iterating through a string with a for loop  
+- A programmer commonly iterates through a string, examining each character.
+
+Iterating until done with a while loop 
+
+### 4.28 Nested loops  
+- A **nested loop** is a loop that appears in the body of another loop. The nested loops are commonly referred to as the **inner loop** and **outer loop**.
+- Nested loops have various uses. One use is to generate all combinations of some items.
+
+### 4.20 Break and continue  
+- A **break statement** in a loop causes an immediate exit of the loop.
+- A **continue statement** in a loop causes an immediate jump to the loop condition check. 
+
 ## Module 4 - Conditionals and Loops - Lecture Videos
 ### Module 4 - Conditionals and Loops - Boolean Expressions Lecture Notes
 Conitionals
