@@ -1411,3 +1411,154 @@ for (initialization; condition; increment)
     // statements  
   }  
 }  
+
+## Module 5 Reading Notes  
+### 5.1 User-defined method basics 
+- Methods (general)
+- A program may perform the same operation repeatedly, causing a large and confusing program due to redundancy. Program redundancy can be reduced by creating a grouping of predefined statements for repeatedly used operations, known as a **method**.
+
+Basics of methods
+- A **method definition** consists of the new method's name and a block of statement.
+- A **method call** is an invocation of a method's name, causing the method's statements to execute.
+- The method's name can be any valid identifier. A **block** is a list of statements surrounded by braces.
+- Methods must be defined within a class. A **method** is a named list of statements. **Access modifers** public static
+
+Returning a value from a method  
+- A method may return one value using a **return statement**.
+- Other return types are allowed, such as char, double, etc. A method can only return one item, not two or more. A return type of **void** indicates that a method does not return any value.
+
+Parameters  
+- A programmer can influence a method's behavior via an input.
+- A **parameter** is method input specifided in a method definition.
+- An **argument** is a value provided to a method's parameter during a method call.
+- A parameter is like a variable declaration.
+- An argument may be an expression.
+
+Multiple or no parameters  
+- A method definition may have multiple parameters, separated by commas. Parameters are assigned argument values by position.
+- A method definition with no parameters must still have the parentheses.
+
+Calling methods from methods  
+- A method's statements may call other methods.
+
+### 5.2 Print Methods  
+Printing from a method  
+- A common operation for a method is to print text. A method that only prints typically does not return a value. the **void** keyword indicates a method does not return a value. A method with a void return type is often called a **void method**. Once a void method finishes execution, control reutnrs to the caller and no value is returned.
+
+Calling a print method multiple times  
+- One benefit of a print method is that complex output statements can be written in code once. Then the print method can be called multiple times to produce the output instead of rewriting complex statements for every necessary instance.
+
+Example: Menu system  
+
+### 5.3 Reasons for defining methods  
+Improving program readability  
+- Decomposing a program into methods can greatly aid program readability, helping yield an initially correct program, and easing future maintenance.
+
+Modular and incremental program development  
+- Programmers commonly use methods to write programs modularly and incrementally.
+- **Modular development** is the process of deviding a program into separate modules that can be developed and tested separately and then integrated into a single program.
+- **Incremental development** is a process in which a programmer writes, compiles, and tests a small amount of code, then writes, compiles, and tests a small amount more (an incremental amount), and so on.
+- A **method stub** is a method definition whose statements have not yet been written.
+
+Avoid writing redundant code  
+- A method can be defined once, then called from multiple places in a program, thus avoiding redundant code.
+- A general guidleline (especially for begineer programmers) is that a method's definition usually shouldn't have more than about 30 lines of code, although this guideline is not a strict rule.
+
+### 5.4 Writing mathematical methods  
+Mathematical methods  
+- A method is commonly defined to compute a mathematical calculation involving several numerical parameteres and returning a numerical result.
+
+Calling methods in expressions  
+- A method call evaluates to the returned value. Thus, a method call often appears within an expression.
+- A method call with a void return type cannot be used within an expression, instead used in a statement.
+
+Modular methods for mathematical expressions  
+- Modularity allows more complex methods to incorporate similar functions. Complex mathematical methods often call other mathematical methods.
+
+### 5.5 Methods with branches  
+Example: Shipping cost calculator
+
+Example: Auction website fee calculator  
+
+### 5.8 How methods work  
+- Each method call creates a new set of local variables, forming part of what is known as a **stack frame**. A return causes these local variables to be discarded.
+
+### 5.9 Methods: Common errors
+- A common error is to copy-and-paste code among methods but then not complete all necessary modifications to the pasted code.
+- Another common error is to return the wrong variable.
+- Failing to return a value for a method is another common error.
+
+### 5.10 Scope of variable/method definitions  
+- The name of a defined variable or method item is only visible to part of a program, known as the item's **scope**. A varibale declared in a method has scope limited to inside that method.
+- A variable declared within a class but outside any method is called a class member variable or **field**, in contrast to a local varibale defined inside a method.
+- Furthermore, if a method updates a field, the method has effects that go beyond its parameters and return value, sometimes known as **side effects**, which unless done carefully can make program maintenance hard.
+
+### 5.11 Method name overloading  
+- Sometimes as program has two methods with the same name but differing in the number or types of parameters, known as **method overloading** or just **method overloading**.
+
+### 5.12 Parameter error checcking
+Verifying parameter values  
+-A good practice is to check that a parameter's value is within an exprected range.  
+
+### 5.13 Using Scanner in methods  
+Passing Scanner to methods  
+- A program should only use one Scanner per input stream.
+- If a method needs to read user input, a good practice is to create a single Scanner object in main() and pass that Scanner object to the method.
+
+### 5.14 Using references in methods  
+Storage of primitive data types and arrays  
+- Arrays can be used in methods just like int and double values. However, an array is stored in memory differently than variables of primitive data types, like int or double. An int and double variable is stored directly in the stack frame. An array is stored indirectly in the help, and only the reference to the array is stored in the stack frame.
+- Passing an int variable as an argument to a method results in the parameter having a seperate copy of the int variable's value.
+
+Passing array references  
+-  
+
+Modifying an array in a method  
+- When an array is passed to a method, the array's reference is copied to the method's stack frame. Two array elements can be swapped in a method.
+
+Common error: Modifying an array reference in a method  
+- A common error is trying to modify an array reference in a method. When an array reference is passed to a method, the reference itself is passed by value. A method cannot change the argument's array reference, since separate copies of the array reference are stored in two different stack frames. Changing the array reference in the method does not change the argument.
+
+### 5.15 Java documentation for methods  
+- An important part of a program is its **documentation**, which is a written description of a program and its various parts, intended to be read by programmers who must maintain or interface with the program.
+- **Javadoc** is a tool that parses specially formatted multi-line comments to generate program documentation in HTML format. The program documentation is also known as and **API** (application programming interface). Those special **doc comments** begin with /** and end with */.
+- The overall description describes the items purpose and extends to the first @, which denotes the beginning of the tags section. A Javadoc comment tags section consists of **block tags**, each of the form @keyword plus text, each block on its own line.
+- Good practice is to include a doc comment for every method, having at least a overall description, a @param block tag for each parameter, and a @return block tag if not void.
+- Common block tags in doc comments:
+- @author : Lists the item's author.
+- @version: Indicates the item's version number (typically for a program).
+- @param : Describes a method parameter's type, purpose, etc.
+- @return : Describes a method's return type, purpose, etc. Optional if return type is void.
+- @see : Refers to relevant information like a website, another method, etc.
+
+### 5.19 Streams using Strings  
+Input string stream  
+- A programmer can read data from a string instead of from the keyboard (standard input) by associating a Scanner object with a string. A Scanner object initialized from a String is often referred to as an **input string stream**.
+- The statement _Scanner inSS = new Scanner(userInfo);_ creates a new Scanner object with a copy of the String userInfo. Then, the scanner can extract data from the Scanner inSS stream using methods like next(), nextInt(), nextDouble(), etc.
+
+Line-by-line input processing 
+- A common use of string streams is to process user input line-by-line.
+
+Output string stream  
+- An **output string stream** is a stream that can write to a String instead of to standard output. An output string stream allows a programmer to build and format a String before outputting to a file or the screen.
+- An output string stream is created using both the StringWritter and PrintWriter classes, which are available by including: _import java.io.StrinWriter;_ and _import java.ioPrintWriter;_. The StringWriter class provides a character stream to output characters. The PrintWriter class augments character streams, such as StringWriter, with print() and println() methods to output various data types, in a manner similar to System.out.
+
+### 5.22 ArrayList  
+ArrayList introduction  
+- Sometimes a programmer wishes to maintain a list of items, like a grocery list, or a course roster. An **ArrayList** is an ordered list of reference type items that comes with java. Each item in an ArrayList is known as an **element**. The statement _import java.util.ArrayList;_ enables use of an ArrayList.
+- The declaration _ArrayList<Integer> vals = new ArrayList<Integer>()_ creates reference variable vals that refers to a new ArrayList object consisting of Integer object. ArrayList does not support primitive types like int, but rather reference types like Integer.
+- A common error is to declare an ArrayList of a primtive type like int.
+
+Common ArrayList methods  
+- **add()** : add(element) Creates space for and add the element at the end of the lsit
+- **get()** : get(index) Returns the element at the specified list location known as the **index**
+- **set()** : set(index, element) Replaces the element at the specified position in this list with the specified element
+- **size()** : size() Returns the number of list elements
+
+Accessing ArrayList elements 
+- The ArrayList's get() method returns the element at the specifided list location, and can be used to lookup the Nth item in a list. the program access the Nth most popular operating system using _operatingSystems.get(nthOs - 1);_. Note that the index is nthOS - 1 rather than just nthOS because an ArrayList's indices start at 0.
+- An ArrayList's index must be an integer type.
+
+Iterating through ArrayLists  
+
+### 5.3 ArrayList ADT
