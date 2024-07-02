@@ -1561,4 +1561,120 @@ Accessing ArrayList elements
 
 Iterating through ArrayLists  
 
-### 5.3 ArrayList ADT
+### 5.23 ArrayList ADT  
+List interface and ArrayList ADT
+- The **Java Collection Framework** (or JCF) defines interfaces and classes for common ADTs knonw as collections in Java. A **Collection** represents a generic group of objects known as elements. Java supports several different Collections, including List, Queue, Map, and others. Each Collection type is an interface that declares methods accessible to programmers.
+- The **List** interface is one of the most commonly used Collection types as it represents an ordered group of elements -- i.e., a sequence. Both an ArrayList and LinkedList are ADTs implementing the List interface.
+- The ArrayList type is an ADT implemented as a class.
+- For the commonly-used public member methods below, assume an ArrayList declared as:
+- _ArrayList<T> arrayList = new ArrayList<T>();_
+- where T represents the ArrayList's type.
+- Table 5.23.1: ArrayList ADT methods
+
+ArrayList's add() and remove() methods
+- Both add() methods are useful for appending new items at certain locations in an ArrayList. Similarly, the remove() method enables a programmer to remove certain elements.
+
+Example: List of players' jersey numbers  
+
+Inserting elements in sorted order
+- The overloaded add() methods are especially useful for maintaining a list in sorted order.
+
+### 5.24 Handling exceptions  
+Unhandled exceptions   
+- An **exception** is an unexpected incident that stops the normal execution of a program. A program that does not handle an exception ends execution.
+
+Catching exceptions  
+- To avoid having a program end when an exception occurs, a program canuse try and catch blocks to handle exception during program execution.
+- A **try block** surrounds normal code, which is exited immediately if a statement within the try block throws an exception.
+- A **catch block** catches an exception thrown in a preceding try block. If the thrown exception's type matches the catch block's parameter type, the code within the catch block executes. A catch block is called an **exception handler**.
+
+Handling exceptions  
+- A program may be able to resolve some exceptions.
+
+## Module 5 Lecture Videos  
+### Module 5 - Deeper Look - Static Methods Lecture Notes  
+
+### Module 5 - Deeper Look - Method Invocation Lecture Notes  
+Max of Three Using Methods  
+- Let's write a method that takes three integer values as input and returns the value of the largest integer.
+public static int maxOfThree (int n1, int n2, int n3) {
+  int max = Math.max(n1, n2);
+  max = Math.max(max, n3);
+  return max;
+}  
+
+Invoking the Method  
+
+public static void main(String[] args) {  
+  int a = 8, b = 5, c = 1-;  
+  int max;  
+  max = maxOfThree(a,b,c);  
+  System.out.println(max);
+}    
+
+Max of Two Dice  
+- Let's write a method that takes two Die objects as input and returns the Die with the highest face value. If they are equal, return the first die.
+
+public static Die max (Die d1, die d2) {  
+  if(d1.getFaceValue() >= d2.getFaceValue()) {  
+    return d1;  
+  }  
+  else {  
+    return d2;   
+  }  
+}  
+
+Pass-By-Reference  
+- When we pass objects to methods, we are passing in the address of the object in memory.
+- Thus, when we are using the reference variable parameter inside the method, we are accessing/modifying the data in the object itself.
+
+Object Parameters  
+
+Returning Objects  
+
+### Module 5 - Deeper Look - Meet the ArrayList Lecture Notes  
+The ArrayList Class  
+- The ArrayList class provdes a way to keep track of objects in a list.
+- Like Strings, each element in the list has an index (with the first element at index 0).
+- Like an address book, each entry stores an object reference, not the object itself.
+
+Using the ArrayList Class  
+- It is part of the Java Collections Framework and can be imported from the java.util package.
+- We must specify the class of objects the ArrayList will contain when we declare and instantiate it.
+- ArrayList<Color> colors = new ArrayList<Color>();
+- ArrayList<Photo> photots = new ArrayList<Photo>();
+- ArrayList<String> words = new ArrayList<String>();
+- This is an example of generics.
+
+Using ArrayList with Primitive Types  
+- The declaration expects a class name inside the angle brackets (e.g. <className>).
+- Since primitive types (int, char, boolean, double) are not classes, we must using their corresponding **wrapper class** when we want to store them in an ArrayList.
+- ArrayList<Integer> numbers = new ArrayList<Integer>();
+- ArrayList<Character> letters = new ArrayList<Character>();
+- ArrayList<Double> scores = new ArrayList<Double>();
+- When we add or remove a primitive type to or from the list, it is automatically converted to the corresponding wrapper object and back again due to **autoboxing**.
+
+The Constructor  
+- When we instantiate an ArrayList object, it is empty.
+- It will grow/shrink dynamically as we add/remove elements.
+- ArrayList<E>()
+-   Constructs an empty list with an initial capacity of ten.
+
+Selected Methods  
+
+More Selected Methods
+
+### Module 5 - Deeper Look - ArrayLists and Loops  
+The for-loop  
+- Adding elements using add.
+- Access each element using get.
+
+The for-each loop  
+- general structure
+for (Object o : list) {
+  System.out.println(o);
+}  
+
+For-each loop limitation  
+- We cannot use the for-each loop to add elements to our ArrayList.
+- If we do, we det the value of the **local variable**, but it does not actually modify the list.
